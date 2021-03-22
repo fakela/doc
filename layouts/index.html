@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1 class="mt-0">{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <p class="lead">{{ .Params.second | safeHTML }}</p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ "docs/prologue/introduction/" | absURL }}" role="button">Get started</a>
+      <p class="meta">RSK Enterprise Cloud Docs<a href="https://github.com/extrimian/Documentation.git"> v{{ .Site.Data.docs.version }}</a></p>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-5">
+        <h2 class="h4">Connect</h2>
+        <p>Integrate the Enterprise IT with decentralized networks</p>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="http://localhost:59031/docs/prologue/introduction/#connect" role="button">Read More</a>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Accelerate</h2>
+        <p>Fast-track development applications of shared buisness applications</p>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="http://localhost:59031/docs/prologue/introduction/#accelerate" role="button">Read More</a>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Govern</h2>
+        <p>Implement a governance operating model easily and hassle-free.</p>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="http://localhost:59031/docs/prologue/introduction/#govern" role="button">Read More</a>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-5">
+        <h2 class="h4">Relax</h2>
+        <p>Focus on apps, not ops.we handle the hard and boring ops stuff</p>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="http://localhost:59031/docs/prologue/introduction/#relax" role="button">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-footer" }}
+<section class="section section-sm container-fluid">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-9">
+      {{- .Content -}}
+    </div>
+  </div>
+</section>
+{{ end }}
